@@ -58,13 +58,3 @@ const getImage = (chosenDate) => {
 // begin by loading data for today.
 getImage(today);
 
-
-
-let navigation = document.createElement('nav') 
-fetch('../examples.json')
-.then(data => data.json())
-.then(json => { 
-    let template = json.map( example => `<a href="${example.url}">${example.name}</a>` ).join('') 
-    navigation.innerHTML = `<a href="/">Home</a> ${template}`
-}) 
-document.querySelector('footer').appendChild(navigation)
