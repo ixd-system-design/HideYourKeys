@@ -24,8 +24,9 @@ app.get("/picture/:chosenDate", (req, res) => {
 
 
 
-// Start Express
-app.listen(process.env.PORT, () => {
-    console.log(`Express is now Live.`)
-    console.log(`Public URL: ` + process.env.PUBLIC_URL)
-}); 
+const port = 3000
+// app.listen(...): starts the web server and prints a message when it's ready.
+// You can then open the URL in your browser to use the app locally.
+app.listen(port, () => {
+    console.log(`Express is live at http://localhost:${port}`)
+})
